@@ -5,16 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="GraphQLs\GetSample.gql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="GraphQLs\GetSample.gql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="GraphQL.Client" Version="3.2.4" />
     <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="3.2.4" />
     <PackageReference Include="ReactiveProperty" Version="7.11.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.6.1" />
     <PackageReference Include="Prism.Unity.Forms" Version="8.1.97" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

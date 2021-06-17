@@ -1,0 +1,15 @@
+query MyQuery($message: String) {
+  GetSample(message: $message) {
+    result {
+      status_code
+    }
+    data {
+      message
+      hoge
+      fuga
+      #piyo
+      foo
+      #bar
+    }
+  }
+}

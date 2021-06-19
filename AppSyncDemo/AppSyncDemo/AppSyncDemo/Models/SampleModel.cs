@@ -13,15 +13,6 @@ namespace AppSyncDemo.Models
         [DataMember(Name = "message")]
         public string Message { get; set; }
 
-        [DataMember(Name = "hoge")]
-        public string Hoge { get; set; }
-
-        [DataMember(Name = "fuga")]
-        public string Fuga { get; set; }
-
-        [DataMember(Name = "foo")]
-        public int? Foo { get; set; }
-
 #if false
 // AWSコンソールで実行時のレスポンス例
 {

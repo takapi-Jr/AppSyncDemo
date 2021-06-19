@@ -1,14 +1,14 @@
-query MyQuery($message: String) {
-  GetSample(message: $message) {
+query MyQuery($name: String) {
+  GetSample(name: $name) {
     result {
       status_code
     }
     data {
       message
-      hoge
-      fuga
+      #hoge
+      #fuga
       #piyo
-      foo
+      #foo
       #bar
     }
   }

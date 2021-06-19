@@ -22,7 +22,7 @@ type LambdaResult {
 }
 
 type Query {
-	GetSample(message: String): GetSampleResponse
+	GetSample(name: String): GetSampleResponse
 }
 
 schema {
@@ -61,7 +61,7 @@ def lambda_handler(event, context):
     }
     
     data = {
-        "message": 'Hello {0}!!!'.format(event['message']),
+        "message": 'Hello {0}!!!'.format(event['name']),
         "hoge": "abc",
         "fuga": "あいう",
         "piyo": "xyz",

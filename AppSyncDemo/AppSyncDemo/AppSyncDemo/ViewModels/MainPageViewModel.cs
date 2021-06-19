@@ -13,7 +13,7 @@ namespace AppSyncDemo.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        public ReactiveProperty<string> Message { get; } = new ReactiveProperty<string>();
+        public ReactiveProperty<string> Name { get; } = new ReactiveProperty<string>();
         public ReactiveProperty<SampleModel> SampleModel { get; } = new ReactiveProperty<SampleModel>(new SampleModel());
         public AsyncReactiveCommand GetSampleCommand { get; } = new AsyncReactiveCommand();
 
@@ -24,7 +24,7 @@ namespace AppSyncDemo.ViewModels
 
             GetSampleCommand.Subscribe(async () =>
             {
-                this.SampleModel.Value = await AppSyncService.Instance.GetSampleAsync(Message.Value);
+                this.SampleModel.Value = await AppSyncService.Instance.GetSampleAsync(Name.Value);
             });
         }
     }

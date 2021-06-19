@@ -6,7 +6,7 @@
 
     <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*" Margin="20">
         <Label Grid.Row="0" Text="Input" />
-        <Entry Grid.Row="1" Text="{Binding Message.Value}" />
+        <Entry Grid.Row="1" Text="{Binding Name.Value}" />
         <Label Grid.Row="2" Text="Output" />
         <Label Grid.Row="3" Text="{Binding SampleModel.Value.Message}" />
         <Button Grid.Row="4" Text="GetSample" Command="{Binding GetSampleCommand}" />

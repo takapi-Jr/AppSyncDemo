@@ -28,12 +28,12 @@ namespace AppSyncDemo.Services
             this.GraphQLHttpClient.HttpClient.DefaultRequestHeaders.Add("x-api-key", ApiKey.AppSyncApiKey);
         }
 
-        public async Task<SampleModel> GetSampleAsync(string message)
+        public async Task<SampleModel> GetSampleAsync(string name)
         {
             var apiName = "GetSample";
             var variables = new 
             {
-                message = message,
+                name = name,
             };
             var response = await ExecQueryAsync<SampleModel>(apiName, variables);
             return response;
